@@ -4,7 +4,7 @@ export default function TaskList({ tasks, toggleTask }) {
   if (tasks.length === 0) {
     return (
       <p className="text-center text-gray-500 italic mt-4">
-         No hay tareas todavía
+         No hay tareas 
       </p>
     );
   }
