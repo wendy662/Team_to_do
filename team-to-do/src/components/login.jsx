@@ -2,11 +2,11 @@ export default function Login({ setUser }) {
   const handleLogin = (e) => {
     e.preventDefault();
     const user = e.target.username.value;
-    if (user === "user1" || user === "user2") {
+    if (user === "usuario1" || user === "usuario2") {
       localStorage.setItem("user", user); 
       setUser(user);
     } else {
-      alert("Usuario no válido (use user1 o user2)");
+      alert("Usuario no válido (use usuario1 o usuario2)");
     }
   };
 

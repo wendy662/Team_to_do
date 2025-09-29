@@ -19,7 +19,7 @@ export default function TaskItem({ task, toggleTask }) {
         >
           {task.description}
         </h3>
-        <p className="text-sm text-gray-500">👤 {task.author}</p>
+        <p className="text-sm text-gray-500">{task.author}</p>
       </div>
 
       <input

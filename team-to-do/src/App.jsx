@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Login from "./components/login";
 import TaskForm from "./components/TaskForm";
-import TaskList from "./components/TaskList";
+import TaskList from "./components/tasklista";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -53,7 +53,6 @@ function App() {
 
   const filteredTasks = tasks.filter(
     (t) =>
-      t.text.toLowerCase().includes(filter.toLowerCase()) ||
       t.author.toLowerCase().includes(filter.toLowerCase()) ||
       t.description.toLowerCase().includes(filter.toLowerCase())
   );
@@ -69,7 +68,7 @@ function App() {
       <div className="flex flex-col justify-center items-center h-screen bg-pink-100">
         <div className="w-10 h-10 border-4 border-pink-500 border-t-transparent rounded-full animate-spin mb-3"></div>
         <p className="text-lg font-semibold text-gray-700">
-          Cargando tus tareas...
+          Cargando tareas
         </p>
       </div>
     );
@@ -86,7 +85,7 @@ function App() {
           <h1 className="text-3xl font-bold text-center">Team To-Do</h1>
 
           <div className="absolute right-4 top-0 flex items-center gap-3">
-            <span className="text-gray-700 font-medium"> Bienvenido, {user}</span>
+            <span className="text-gray-700 font-medium"> Bienvenido {user}</span>
             <button
               onClick={handleLogout}
               className="ml-2 bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600"

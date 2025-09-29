@@ -20,14 +20,14 @@ export default function TaskForm({ addTask, setFilter }) {
     >
       <input
         type="text"
-        placeholder="👤 Autor..."
+        placeholder=" Autor"
         value={author}
         onChange={(e) => setAuthor(e.target.value)}
         className="p-2 border rounded-md"
       />
 
       <textarea
-  placeholder="📝 Descripción de la tarea..."
+  placeholder="Descripción"
   value={description}
   onChange={(e) => setDescription(e.target.value)}
   className="p-2 border rounded-md resize-none"  
@@ -44,7 +44,7 @@ export default function TaskForm({ addTask, setFilter }) {
 
       <input
         type="text"
-        placeholder="🔍 Buscar..."
+        placeholder=" Buscar"
         onChange={(e) => setFilter(e.target.value)}
         className="p-2 border rounded-md"
       />

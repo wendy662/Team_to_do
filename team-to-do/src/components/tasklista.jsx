@@ -1,4 +1,4 @@
-import TaskItem from "./TaskItem";
+import TaskItem from "./tasktajetica";
 
 export default function TaskList({ tasks, toggleTask }) {
   if (tasks.length === 0) {
@@ -17,7 +17,7 @@ export default function TaskList({ tasks, toggleTask }) {
 
       {pending.length > 0 && (
         <>
-          <h2 className="text-xl font-bold mb-2"> Pendientes</h2>
+          <h2 className="text-xl font-bold mb-2"> Tareas Pendientes</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-8 justify-items-start">
             {pending.map((task) => (
               <TaskItem key={task.id} task={task} toggleTask={toggleTask} />
