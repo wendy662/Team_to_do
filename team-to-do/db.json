@@ -1,3 +1,6 @@
 {
-  "tasks": []
+  "tasks": [
+    { "id": 1, "author": "usuario1", "description": "Configurar Tailwind", "completed": false },
+    { "id": 2, "author": "usuario2", "description": "Preparar README", "completed": true }
+  ]
 }
