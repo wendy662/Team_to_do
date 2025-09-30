@@ -87,12 +87,5 @@ React Toastify
 
 JSON Server
 
-📸 Capturas
-Pantalla de Login
-
-Lista de Tareas
-
 👨‍💻 Autores
 Este proyecto fue realizado por Tatiana vega y Wendy Mercado
-
-Cada integrante desarrolló y documentó componentes del proyecto, siguiendo buenas prácticas de colaboración en GitHub (uso de ramas, commits descriptivos y PRs).
