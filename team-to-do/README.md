@@ -1,19 +1,22 @@
-# 📝 TEAM TO-DO
+📌 Team To-Do
 
-Este proyecto es una aplicación web para la gestión de tareas desarrollada con **React + Vite**, que permite a dos usuarios iniciar sesión, crear, buscar, marcar y eliminar tareas.  
-Además, utiliza **Context API** para manejar la autenticación y **LocalStorage** para mantener la persistencia de los datos incluso al cerrar el navegador.
+Aplicación web sencilla para la gestión de tareas en equipo.
+Permite a diferentes usuarios iniciar sesión, agregar tareas, marcarlas como completadas o pendientes, filtrarlas y eliminarlas.
+Todo se guarda en el localStorage, por lo que las tareas se mantienen incluso si cierras el navegador.
 
----
+🚀 Funcionalidades
 
-## 🚀 Tecnologías utilizadas
+✅ Iniciar sesión con usuarios predefinidos (usuario1 o usuario2)
+✅ Crear tareas con autor y descripción
+✅ Filtrar tareas por autor o descripción
+✅ Marcar tareas como completadas o pendientes
+✅ Eliminar tareas individualmente
+✅ Almacenamiento en localStorage por cada usuario
 
-- ⚛ **React** – Librería principal para la interfaz.  
-- ⚡ **Vite** – Herramienta de desarrollo rápida y ligera.  
-- 💅 **TailwindCSS** – Framework de estilos responsivo.  
-- 🧠 **Context API** – Manejo de estado global (autenticación).  
-- 💾 **LocalStorage** – Persistencia local de datos en el navegador.
+🛠️ Tecnologías utilizadas
 
----
+⚛️ React (con Vite o Create React App)
 
-## 📂 Estructura del proyecto
+🎨 Tailwind CSS (para estilos rápidos y responsivos)
 
+💾 LocalStorage (para persistencia de datos sin backend)
