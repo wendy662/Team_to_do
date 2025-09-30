@@ -6,9 +6,9 @@ export default function TaskForm({ addTask, setFilter }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!description.trim()) return; 
+    if (!description.trim()) return;
 
-    addTask("", description, author); 
+    addTask("", description, author);
     setAuthor("");
     setDescription("");
   };
@@ -20,20 +20,19 @@ export default function TaskForm({ addTask, setFilter }) {
     >
       <input
         type="text"
-        placeholder=" Autor"
+        placeholder="Autor"
         value={author}
         onChange={(e) => setAuthor(e.target.value)}
         className="p-2 border rounded-md"
       />
 
       <textarea
-  placeholder="Descripción"
-  value={description}
-  onChange={(e) => setDescription(e.target.value)}
-  className="p-2 border rounded-md resize-none"  
-  rows={3}
-/>
-
+        placeholder="Descripción"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+        className="p-2 border rounded-md resize-none"
+        rows={3}
+      />
 
       <button
         type="submit"
@@ -44,7 +43,7 @@ export default function TaskForm({ addTask, setFilter }) {
 
       <input
         type="text"
-        placeholder=" Buscar"
+        placeholder="Buscar"
         onChange={(e) => setFilter(e.target.value)}
         className="p-2 border rounded-md"
       />

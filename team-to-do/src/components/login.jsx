@@ -3,7 +3,7 @@ export default function Login({ setUser }) {
     e.preventDefault();
     const user = e.target.username.value;
     if (user === "usuario1" || user === "usuario2") {
-      localStorage.setItem("user", user); 
+      localStorage.setItem("user", user);
       setUser(user);
     } else {
       alert("Usuario no válido (use usuario1 o usuario2)");
@@ -21,12 +21,10 @@ export default function Login({ setUser }) {
         </h2>
         <input
           name="username"
-          placeholder="Ingrese usuario (user1 o user2)"
+          placeholder="Ingrese usuario (usuario1 o usuario2)"
           className="border p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
-        <button
-          className="bg-blue-400 text-white p-2 rounded-md hover:bg-pink-600 transition-all shadow-md"
-        >
+        <button className="bg-blue-400 text-white p-2 rounded-md hover:bg-pink-600 transition-all shadow-md">
           Iniciar Sesión
         </button>
       </form>
