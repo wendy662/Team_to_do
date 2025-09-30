@@ -1,12 +1,22 @@
-export default function Login({ setUser }) {
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+
+export default function Login() {
+  const { login } = useAuth();      
+  const navigate = useNavigate();
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
   const handleLogin = (e) => {
     e.preventDefault();
-    const user = e.target.username.value;
-    if (user === "usuario1" || user === "usuario2") {
-      localStorage.setItem("user", user);
-      setUser(user);
+
+    const success = login(username, password); 
+    if (success) {
+      navigate("/dashboard"); 
     } else {
-      alert("Usuario no válido (use usuario1 o usuario2)");
+      setError("Usuario o contraseña incorrectos");
     }
   };
 
@@ -19,14 +29,39 @@ export default function Login({ setUser }) {
         <h2 className="text-2xl font-bold text-center text-gray-700">
           Bienvenido a Team to do
         </h2>
+
+        {/* input para ingresar el Usuario */}
         <input
           name="username"
-          placeholder="Ingrese usuario (usuario1 o usuario2)"
+          placeholder="Usuario"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
           className="border p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+          required
         />
-        <button className="bg-blue-400 text-white p-2 rounded-md hover:bg-pink-600 transition-all shadow-md">
+
+        {/* input para ingresar la Contraseña */}
+        <input
+          type="password"
+          name="password"
+          placeholder="Contraseña"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="border p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+          required
+        />
+
+        {/* Botón para iniciar sesión*/}
+        <button
+          className="bg-blue-400 text-white p-2 rounded-md hover:bg-pink-600 transition-all shadow-md"
+        >
           Iniciar Sesión
         </button>
+
+        {/* Error */}
+        {error && (
+          <p className="text-red-500 text-sm text-center mt-2">{error}</p>
+        )}
       </form>
     </div>
   );
